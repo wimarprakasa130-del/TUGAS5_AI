@@ -1,0 +1,67 @@
+{
+  "judul": "Diagnosis Masalah Kualitas Air Kolam Lele",
+  "batas": "Aturan berasal dari 2 sumber: pedoman budidaya lele KKP RI dan jurnal Universitas Gadjah Mada (UGM). Hanya mencakup 5 masalah utama: keracunan amonia, kekurangan oksigen, stres pH, air terlalu panas, dan kematian massal akibat kualitas air buruk. Hasilnya saran awal, bukan keputusan akhir.",
+  "sumber": {
+    "S1": "Pedoman Teknis Budidaya Ikan Lele (Clarias sp.), Direktorat Jenderal Perikanan Budidaya, Kementerian Kelautan dan Perikanan RI (KKP), https://kkp.go.id, diakses 13 Nov 2026",
+    "S2": "Pengelolaan Kualitas Air untuk Budidaya Ikan Lele, Fakultas Pertanian Universitas Gadjah Mada (UGM), https://ugm.ac.id, diakses 13 Nov 2026"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": ["sisa pakan menumpuk di dasar kolam", "jarang melakukan penyiponan"],
+      "mode": "dan",
+      "maka": "kadar amonia tinggi",
+      "sumber": "S1"
+    },
+    {
+      "id": "R2",
+      "jika": ["kadar amonia tinggi", "ikan megap-megap di permukaan", "nafsu makan ikan menurun"],
+      "mode": "dan",
+      "maka": "keracunan amonia",
+      "sumber": "S2"
+    },
+    {
+      "id": "R3",
+      "jika": ["padat tebar ikan terlalu tinggi", "tidak ada aerator"],
+      "mode": "dan",
+      "maka": "kadar oksigen terlarut rendah",
+      "sumber": "S1"
+    },
+    {
+      "id": "R4",
+      "jika": ["kadar oksigen terlarut rendah", "ikan megap-megap di permukaan"],
+      "mode": "dan",
+      "maka": "kekurangan oksigen",
+      "sumber": "S2"
+    },
+    {
+      "id": "R5",
+      "jika": ["air kolam berbau menyengat", "warna air kolam kehitaman"],
+      "mode": "dan",
+      "maka": "kadar amonia tinggi",
+      "sumber": "S1"
+    },
+    {
+      "id": "R6",
+      "jika": ["pH air di bawah 6", "ikan sering melompat"],
+      "mode": "dan",
+      "maka": "stres pH asam",
+      "sumber": "S2"
+    },
+    {
+      "id": "R7",
+      "jika": ["suhu air di atas 32 derajat", "ikan berkumpul di dasar kolam"],
+      "mode": "dan",
+      "maka": "air terlalu panas",
+      "sumber": "S1"
+    },
+    {
+      "id": "R8",
+      "jika": ["keracunan amonia", "kekurangan oksigen"],
+      "mode": "atau",
+      "maka": "kematian massal ikan",
+      "sumber": "S2"
+    }
+  ]
+}
+
